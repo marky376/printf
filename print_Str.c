@@ -6,6 +6,7 @@
  * Return: always the number of arguments printed
  */
 
+int print_Hexa_2(unsigned int Hex);
 int print_Str(va_list val)
 {
 	char *l = va_arg(val, char *);

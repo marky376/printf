@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_num2 - prints the given decimal
+ * print_dec - prints the given decimal
  * @args: the arguments to be printed by the program
  *
  * Return: the amount of decimal numbers to be printed
  */
 
-int print_num2(va_list args)
+int print_dec(va_list args)
 
 {
 	int n = va_arg(args, int);

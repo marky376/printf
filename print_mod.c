@@ -7,7 +7,9 @@
 
 int print_mod(void)
 {
-	_putchar(37);
+	char md = 37;
+
+	_putchar(md);
 
 	return (1);
 }

@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_num - prints the given integer
+ * print_integer - prints the given integer
  * @args: the arguments to be printed by the program
  *
  * Return: the number of numbers to be printed
  */
 
-int print_num(va_list args)
+int print_integer(va_list args)
 {
 	int n = va_arg(args, int);
 	int sit, dig, exp = 1;

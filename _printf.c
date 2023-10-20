@@ -11,9 +11,9 @@ int _printf(const char *format, ...)
 {
 	link l[] = {
 		{"%c", print_w}, {"%s", print_v}, {"%%", print_mod},
-		{"%d", print_num2}, {"%i", print_num}, {"%u", print_uns},
-		{"%S", print_Str}, {"%b", print_bit}, {"%o", print_octal},
-		{"%x", print_hexa}, {"%X", print_Hexa}, {"%R", print_rot},
+		{"%d", print_dec}, {"%i", print_integer}, {"%u", print_uns},
+		{"%s", print_Str}, {"%b", print_bit}, {"%o", print_octal},
+		{"%x", print_hexa}, {"%X", print_Hexa}, {"%r", print_rot},
 		{"%p", print_point}, {"%r", print_rev}
 	};
 
@@ -27,6 +27,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	}
 
+	Heth:
 	while (format[a] != '\0')
 	{
 		b = 13;
@@ -36,6 +37,8 @@ int _printf(const char *format, ...)
 			{
 				len = len + l[b].m(args);
 				a = a + 2;
+
+				goto Heth;
 			}
 			b--;
 

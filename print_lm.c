@@ -7,16 +7,23 @@
  */
 
 int print_lm1(va_list args)
-{
+{	
+	char length = 'l';
 	int n;
 	long int ln;
+
 	if (length == 'l')
 	{
+
 		ln = va_arg(args, long int);
+		_putchar(ln + '0');
+		return (0);
 	}
 	else
 	{
 		n = va_arg(args, int);
+		_putchar(n + '0');
+		return (0);
 	}
 }
 
@@ -30,15 +37,20 @@ int print_lm1(va_list args)
 int print_lm2(va_list args)
 {
 	int n;
-	short int hn;
+	char length = 'h';
+	int hn;
 
 	if (length == 'h')
 	{
 
-		hn = va_arg(args, short int);
+		hn = va_arg(args, int);
+		_putchar(hn + '0');
+		return (0);
 	}
 	else
 	{
 		n = va_arg(args, int);
+		_putchar(n + '0');
+		return (0);
 	}
 }
